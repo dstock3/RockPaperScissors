@@ -20,6 +20,7 @@ function game() {
         };
         return computerSelection;
     };
+    const computerSelection = computerPlay();
 
     let playerSelection = prompt("What do you choose?");
     playerSelection = playerSelection.toLowerCase();
@@ -65,7 +66,7 @@ function game() {
         };
     }
 
-    console.log(playRound(playerSelection, computerPlay()));
+    console.log(playRound(playerSelection, computerSelection));
 };
 
 game();
