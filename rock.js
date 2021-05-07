@@ -23,10 +23,6 @@ if (compInput > .66) {
     console.log("The computer chooses Scissors!")
 };
 
-if (userInput === compInput) {
-    console.log("It's a draw!");
-};
-
 if (userInput === "Rock" && compInput === "Paper") {
     console.log('You have chosen Rock!')
     console.log("You lose!")
@@ -55,5 +51,10 @@ if (userInput === "Scissors" && compInput === "Rock") {
 if (userInput === "Scissors" && compInput === "Paper") {
     console.log("You have chosen Scissors!")
     console.log("You win!")
+};
+
+if (userInput === compInput) {
+    console.log(`You have chosen ${userInput}!`)
+    console.log("It's a draw!");
 };
 
