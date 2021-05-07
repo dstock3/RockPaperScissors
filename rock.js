@@ -1,32 +1,32 @@
-let playerSelection = prompt("What do you choose?");
-playerSelection = playerSelection.toLowerCase();
-
-function computerPlay() {
-    console.log("Rock, Paper, Scissors...shoot!");
-    let computerSelection = (Math.random());
-
-    if (computerSelection  <= .33) {
-        computerSelection = "rock";
-        console.log("The computer chooses rock!")
-    };
-
-    if (computerSelection > .33 && computerSelection <= .66) {
-        computerSelection = "paper";
-        console.log("The computer chooses paper!")
-    };
-
-    if (computerSelection > .66) {
-        computerSelection = "scissors";
-        console.log("The computer chooses scissors!")
-    };
-    return computerSelection;
-};
-const computerSelection = computerPlay();
-
 let playerWin = 0;
 let computerWin = 0;
 
 function game() {
+    let playerSelection = prompt("What do you choose?");
+    playerSelection = playerSelection.toLowerCase();
+
+    function computerPlay() {
+        console.log("Rock, Paper, Scissors...shoot!");
+        let computerSelection = (Math.random());
+    
+        if (computerSelection  <= .33) {
+            computerSelection = "rock";
+            console.log("The computer chooses rock!")
+        };
+    
+        if (computerSelection > .33 && computerSelection <= .66) {
+            computerSelection = "paper";
+            console.log("The computer chooses paper!")
+        };
+    
+        if (computerSelection > .66) {
+            computerSelection = "scissors";
+            console.log("The computer chooses scissors!")
+        };
+        return computerSelection;
+    };
+    
+    let computerSelection = computerPlay();
 
     function playRound(playerSelection, computerSelection) {
 
@@ -78,4 +78,8 @@ function game() {
     return playerWin, computerWin;
 };
 
+game();
+game();
+game();
+game();
 game();
