@@ -1,5 +1,26 @@
 console.log("Rock, Paper, Scissors...shoot!");
 
+function computerPlay() {
+    let computerSelection = (Math.random());
+
+    if (computerSelection  <= .33) {
+        computerSelection = "rock";
+        console.log("The computer chooses rock!")
+    };
+
+    if (computerSelection > .33 && computerSelection <= .66) {
+        computerSelection = "paper";
+        console.log("The computer chooses paper!")
+    };
+
+    if (computerSelection > .66) {
+        computerSelection = "scissors";
+        console.log("The computer chooses scissors!")
+    };
+    return computerSelection;
+};
+
+
 let userInput = prompt("What do you choose?");
 userInput = userInput.toLowerCase();
 
@@ -7,22 +28,8 @@ userInput = userInput.toLowerCase();
     userInput = prompt("Be serious now! That input is not valid. What do you choose?")
 } */
 
-let compInput = (Math.random());
 
-if (compInput  <= .33) {
-    compInput = "rock";
-    console.log("The computer chooses rock!")
-};
 
-if (compInput > .33 && compInput <= .66) {
-    compInput = "paper";
-    console.log("The computer chooses paper!")
-};
-
-if (compInput > .66) {
-    compInput = "scissors";
-    console.log("The computer chooses scissors!")
-};
 
 if (userInput === "rock" && compInput === "paper") {
     console.log('You have chosen rock!')
