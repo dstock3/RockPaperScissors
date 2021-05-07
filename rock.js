@@ -20,49 +20,51 @@ function computerPlay() {
     return computerSelection;
 };
 
-
-let userInput = prompt("What do you choose?");
-userInput = userInput.toLowerCase();
+let playerSelection = prompt("What do you choose?");
+playerSelection = playerSelection.toLowerCase();
 
 /* if (userInput == "Rock" || "rock" || "Paper" || "paper" || "Scissors" || "scissors") {
     userInput = prompt("Be serious now! That input is not valid. What do you choose?")
 } */
 
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection === "rock" && computerSelection === "paper") {
+        console.log('You have chosen rock!')
+        console.log("You lose! Paper covers rock.")
+    };
+    
+    if (playerSelection === "paper" && computerSelection === "rock") {
+        console.log("You have chosen paper!")
+        console.log("You win! Paper covers rock.")
+    };
+    
+    if (playerSelection === "rock" && computerSelection === "scissors") {
+        console.log("You have chosen rock!")
+        console.log("You win! Rock beats scissors.")
+    };
+    
+    if (playerSelection === "paper" && computerSelection === "scissors") {
+        console.log("You have chosen paper!")
+        console.log("You lose! Scissors cuts paper.")
+    };
+    
+    if (playerSelection === "scissors" && computerSelection === "rock") {
+        console.log("You have chosen scissors!")
+        console.log("You lose! Rock beats scissors.")
+    };
+    
+    if (playerSelection === "scissors" && computerSelection === "paper") {
+        console.log("You have chosen scissors!")
+        console.log("You win! Scissors cuts paper.")
+    };
+    
+    if (playerSelection === computerSelection) {
+        console.log(`You have chosen ${playerSelection}!`)
+        console.log("It's a draw!");
+    };
+}
+
+playRound(playerSelection, computerPlay());
 
 
-
-if (userInput === "rock" && compInput === "paper") {
-    console.log('You have chosen rock!')
-    console.log("You lose! Paper covers rock.")
-};
-
-if (userInput === "paper" && compInput === "rock") {
-    console.log("You have chosen paper!")
-    console.log("You win! Paper covers rock.")
-};
-
-if (userInput === "rock" && compInput === "scissors") {
-    console.log("You have chosen rock!")
-    console.log("You win! Rock beats scissors.")
-};
-
-if (userInput === "paper" && compInput === "scissors") {
-    console.log("You have chosen paper!")
-    console.log("You lose! Scissors cuts paper.")
-};
-
-if (userInput === "scissors" && compInput === "rock") {
-    console.log("You have chosen scissors!")
-    console.log("You lose! Rock beats scissors.")
-};
-
-if (userInput === "scissors" && compInput === "paper") {
-    console.log("You have chosen scissors!")
-    console.log("You win! Scissors cuts paper.")
-};
-
-if (userInput === compInput) {
-    console.log(`You have chosen ${userInput}!`)
-    console.log("It's a draw!");
-};
 
