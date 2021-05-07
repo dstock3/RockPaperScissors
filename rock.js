@@ -1,72 +1,81 @@
-function game() {
+let playerSelection = prompt("What do you choose?");
+playerSelection = playerSelection.toLowerCase();
+
+function computerPlay() {
     console.log("Rock, Paper, Scissors...shoot!");
+    let computerSelection = (Math.random());
 
-    function computerPlay() {
-        let computerSelection = (Math.random());
-
-        if (computerSelection  <= .33) {
-            computerSelection = "rock";
-            console.log("The computer chooses rock!")
-        };
-
-        if (computerSelection > .33 && computerSelection <= .66) {
-            computerSelection = "paper";
-            console.log("The computer chooses paper!")
-        };
-
-        if (computerSelection > .66) {
-            computerSelection = "scissors";
-            console.log("The computer chooses scissors!")
-        };
-        return computerSelection;
+    if (computerSelection  <= .33) {
+        computerSelection = "rock";
+        console.log("The computer chooses rock!")
     };
-    const computerSelection = computerPlay();
 
-    let playerSelection = prompt("What do you choose?");
-    playerSelection = playerSelection.toLowerCase();
+    if (computerSelection > .33 && computerSelection <= .66) {
+        computerSelection = "paper";
+        console.log("The computer chooses paper!")
+    };
 
-    /* if (userInput !== "Rock" || "rock" || "Paper" || "paper" || "Scissors" || "scissors") {
-        userInput = prompt("Be serious now! That input is not valid. What do you choose?")
-    } */
+    if (computerSelection > .66) {
+        computerSelection = "scissors";
+        console.log("The computer chooses scissors!")
+    };
+    return computerSelection;
+};
+const computerSelection = computerPlay();
+
+let playerWin = 0;
+let computerWin = 0;
+
+function game() {
 
     function playRound(playerSelection, computerSelection) {
+
         if (playerSelection === "rock" && computerSelection === "paper") {
             console.log('You have chosen rock!')
-            return("You lose! Paper covers rock.");
+            console.log("You lose! Paper covers rock.");
+            return computerWin = ++computerWin;
         };
         
         if (playerSelection === "paper" && computerSelection === "rock") {
             console.log("You have chosen paper!")
-            return("You win! Paper covers rock.");
+            console.log("You win! Paper covers rock.");
+            return playerWin = ++playerWin;
         };
         
         if (playerSelection === "rock" && computerSelection === "scissors") {
             console.log("You have chosen rock!")
-            return("You win! Rock beats scissors.");
+            console.log("You win! Rock beats scissors.");
+            return playerWin = ++playerWin;
         };
         
         if (playerSelection === "paper" && computerSelection === "scissors") {
             console.log("You have chosen paper!")
-            return("You lose! Scissors cuts paper.");
+            console.log("You lose! Scissors cuts paper.");
+            return computerWin = ++computerWin;
         };
         
         if (playerSelection === "scissors" && computerSelection === "rock") {
             console.log("You have chosen scissors!")
-            return("You lose! Rock beats scissors.");
+            console.log("You lose! Rock beats scissors.");
+            return computerWin = ++computerWin;
         };
         
         if (playerSelection === "scissors" && computerSelection === "paper") {
             console.log("You have chosen scissors!")
-            return("You win! Scissors cuts paper.");
+            console.log("You win! Scissors cuts paper.");
+            return playerWin = ++playerWin;
         };
         
         if (playerSelection === computerSelection) {
             console.log(`You have chosen ${playerSelection}!`)
-            return("It's a draw!");
+            console.log("It's a draw!");
         };
     }
 
-    console.log(playRound(playerSelection, computerSelection));
+    playRound(playerSelection, computerSelection);
+    console.log("Player: " + playerWin);
+    console.log("Computer: " + computerWin);
+    return playerWin, computerWin;
 };
 
 game();
