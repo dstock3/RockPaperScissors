@@ -1,7 +1,7 @@
 console.log("Rock, Paper, Scissors...shoot!");
 
 let userInput = prompt("What do you choose?");
-if (userInput != "Rock" || "Paper" || "Scissors") {
+if (userInput != "Rock" || "rock" || "Paper" || "paper" || "Scissors" || "scissors") {
     userInput = prompt("Be serious now! That input is not valid. What do you choose?")
 };
 
