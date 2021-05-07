@@ -26,32 +26,32 @@ if (compInput > .66) {
 
 if (userInput === "rock" && compInput === "paper") {
     console.log('You have chosen rock!')
-    console.log("You lose!")
+    console.log("You lose! Paper covers rock.")
 };
 
 if (userInput === "paper" && compInput === "rock") {
     console.log("You have chosen paper!")
-    console.log("You win!")
+    console.log("You win! Paper covers rock.")
 };
 
 if (userInput === "rock" && compInput === "scissors") {
     console.log("You have chosen rock!")
-    console.log("You win!")
+    console.log("You win! Rock beats scissors.")
 };
 
 if (userInput === "paper" && compInput === "scissors") {
     console.log("You have chosen paper!")
-    console.log("You lose!")
+    console.log("You lose! Scissors cuts paper.")
 };
 
 if (userInput === "scissors" && compInput === "rock") {
     console.log("You have chosen scissors!")
-    console.log("You lose!")
+    console.log("You lose! Rock beats scissors.")
 };
 
 if (userInput === "scissors" && compInput === "paper") {
     console.log("You have chosen scissors!")
-    console.log("You win!")
+    console.log("You win! Scissors cuts paper.")
 };
 
 if (userInput === compInput) {
