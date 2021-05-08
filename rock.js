@@ -83,3 +83,12 @@ game();
 game();
 game();
 game();
+
+if (playerWin > computerWin) {
+    console.log("You have won the game!")
+};
+
+if (playerWin < computerWin) {
+    console.log("The computer won. Try again!")
+};
+
