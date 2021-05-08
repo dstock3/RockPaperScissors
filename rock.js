@@ -92,3 +92,7 @@ if (playerWin < computerWin) {
     console.log("The computer won. Try again!")
 };
 
+if (playerWin == computerWin) {
+    console.log("It's a draw. Try again!")
+};
+
